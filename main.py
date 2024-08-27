@@ -8,8 +8,8 @@ from colorama import init, Fore, Back, Style
 # Initialize colorama for colored output
 init(autoreset=True)
 
-# LaunchDarkly SDK key (replace with your actual SDK key)
-sdk_key = os.getenv("LAUNCHDARKLY_SDK_KEY")
+# LaunchDarkly SDK key (set env var, or replace with your actual SDK key)
+sdk_key = os.getenv("LAUNCHDARKLY_SDK_KEY") or "sdk-1234"
 
 # LaunchDarkly client initialization
 ldclient.set_config(Config(sdk_key))
